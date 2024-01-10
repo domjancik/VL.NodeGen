@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="PtlyI35xmjVLJDNMzsZYyZ" LanguageVersion="2021.3.3.131" Version="0.128">
+  <NugetDependency Id="Emyqfy3Vq7JMkL91kvEt94" Location="VL.CoreLib" Version="2021.3.3" />
+  <Patch Id="BpvVD2UZLM1QcHRFzNtVEa">
+    <Canvas Id="GybgaLAVCgGN0ZOgUO2SNo" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="MK4BKU03PQhL1GTRFwkH66">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="Iozs4i7NcsnNswpU6Yl1Ks">
+        <Canvas Id="TYPzLuqNjxkOMm7doebEde" CanvasType="Group">
+          <Pad Id="Fx0aYMtxOyvPlpz9ya8qVQ" Bounds="358,301,320,0" ShowValueBox="true" isIOBox="true" Value="https://github.com/domjancik/VL.Nuget.Template">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="Vq3lgQZFdDuLmS2C8XYv4G" Name="Create" />
+        <Patch Id="RJf8g5BksLXO6I5Lcolsds" Name="Update" />
+        <ProcessDefinition Id="FA6iGGlMN7bPOOAsnFGQrV">
+          <Fragment Id="Lc4Mvoev0RvP8kQcjTTk15" Patch="Vq3lgQZFdDuLmS2C8XYv4G" Enabled="true" />
+          <Fragment Id="KOoTaSSszUmPooybFfn5wV" Patch="RJf8g5BksLXO6I5Lcolsds" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="SYe2aNsFUnNPOvHH9csxht" Location="VL.CoreLib" Version="2021.3.3" />
+</Document>
