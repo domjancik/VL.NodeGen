@@ -44,7 +44,7 @@
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="AzOfRYcZXZgLZh6T65tdR6" Comment="Function prompt" Bounds="30,173,424,36" ShowValueBox="true" isIOBox="true" Value="Surprise me with some nice animation based on a time parameter">
+          <Pad Id="AzOfRYcZXZgLZh6T65tdR6" Comment="Function prompt" Bounds="30,173,424,36" ShowValueBox="true" isIOBox="true" Value="Create a star shape, with number of ends, inner and outer radius as input and Vector2 list output">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="String" />
               <CategoryReference Kind="Category" Name="Primitive" />
@@ -194,23 +194,6 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="1328,864,145,19" Id="PEIhPT2Ya7PP72bOb07fuE">
-            <p:NodeReference LastCategoryFullName="Graphics.Skia" LastDependency="VL.Skia.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="Renderer" />
-            </p:NodeReference>
-            <Pin Id="Snrh1ZgKRoDNqGmcguDrMy" Name="Bounds" Kind="InputPin" DefaultValue="1512, 100, 616, 439" />
-            <Pin Id="OKlNdJCzZTaPOmr8ZLaGTR" Name="Input" Kind="InputPin" />
-            <Pin Id="RWsB5KoV8MTOMiO5UuvKHT" Name="Color" Kind="InputPin" />
-            <Pin Id="EijMhnriNtoNGoyatXt9wW" Name="Clear" Kind="InputPin" />
-            <Pin Id="SgkLAlxTsuhPkQ0jeirBi7" Name="Space" Kind="InputPin" />
-            <Pin Id="Bmb7RcgDScXMftYcfcZi5M" Name="Show Cursor" Kind="InputPin" />
-            <Pin Id="PKUCJ425Wt3PPmbTTwUGA5" Name="VSync" Kind="InputPin" />
-            <Pin Id="Ge5F1jyzD3GQGdIdpk6lea" Name="Enabled" Kind="InputPin" />
-            <Pin Id="HeGC6Jk7My5PzbkNixEjS1" Name="Form" Kind="OutputPin" />
-            <Pin Id="VrY9RRHItkQO9yyRbH66Le" Name="ClientBounds" Kind="OutputPin" />
-            <Pin Id="UrpbmlFdntCMYUkk4Qq8tN" Name="Render Time" Kind="OutputPin" />
-          </Node>
           <Node Bounds="1344,710,200,81" Id="PT4MKG5Sj9uOgwxVaErnLh">
             <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
@@ -298,7 +281,54 @@
               <CategoryReference Kind="Category" Name="Primitive" />
             </p:TypeAnnotation>
           </Pad>
-          <Overlay Id="UruZ1whH4cNMzhpKHiS02F" Name="Examples" Bounds="21,486,1865,460" />
+          <Overlay Id="UruZ1whH4cNMzhpKHiS02F" Name="Examples" Bounds="21,486,1865,863" />
+          <Pad Id="KaE9KE2LmM8MI7l3I4Yy7u" Comment="Error" Bounds="155,432,169,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="HL6TP5shSp9MWZzbrx6KjL" Comment="Function prompt" Bounds="89,981,424,36" ShowValueBox="true" isIOBox="true" Value="Create a star shape, with number of ends, inner and outer radius as input and Vector2 list output">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="98,1100,63,19" Id="KPnK16lOfH2QDLF3fgkZhG">
+            <p:NodeReference LastCategoryFullName="nodegen_help_project.StarShapeGenerator" LastDependency="nodegen-help-project.csproj">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="AssemblyCategory" Name="StarShapeGenerator" />
+              <Choice Kind="OperationCallFlag" Name="CreateStar" />
+            </p:NodeReference>
+            <Pin Id="IJh3fFyu2hfMBto609sguA" Name="Number Of Ends" Kind="InputPin" />
+            <Pin Id="AJCoRkdvurNMLF4ncAgFRn" Name="Inner Radius" Kind="InputPin" />
+            <Pin Id="EqVPALU0xwrPUtTNQI3KP4" Name="Outer Radius" Kind="InputPin" />
+            <Pin Id="T7RFzKp4wsMOmI0AR4jnAN" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="97,1128,85,19" Id="VmoF2ibSrfzPHztsuGA6EN">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia.Layers" LastDependency="VL.Skia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Polygon" />
+            </p:NodeReference>
+            <Pin Id="ANT2aKW5k1GLSdVoN2lz9r" Name="Points" Kind="InputPin" />
+            <Pin Id="DspH3rZvmbqORVzoLBr1d0" Name="Closed" Kind="InputPin" />
+            <Pin Id="CXN0ohMv1Z5Oqa3EG1m0S0" Name="Paint" Kind="InputPin" />
+            <Pin Id="Sz6x3Ias95LOXpf9bCxvUc" Name="Winding" Kind="InputPin" />
+            <Pin Id="Jc7cH1FvkkHLQwQCjlpaaf" Name="Enabled" Kind="InputPin" />
+            <Pin Id="Nw1FZQWt8v6QWhVCCGNHIu" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="BDfnP3xTvXgMixOVlil2CT" Comment="" Bounds="99,1173,190,132" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="ApVHg4yaUVXLniwb5EQEpB" Comment="Number Of Ends" Bounds="98,1043,35,15" ShowValueBox="true" isIOBox="true" Value="8">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="F0wBsAzBVmdL95h7z4fdii" Comment="Inner Radius" Bounds="129,1063,35,15" ShowValueBox="true" isIOBox="true" Value="0.22">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="GDmMKshr9O3Md1FEZAmxLv" Comment="Outer Radius" Bounds="158,1082,35,15" ShowValueBox="true" isIOBox="true" Value="0.55">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="LN6FnoHPlCBMYrfuunJZY4" Comment="" Bounds="1351,876,190,132" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="Vq3lgQZFdDuLmS2C8XYv4G" Name="Create" />
         <Patch Id="RJf8g5BksLXO6I5Lcolsds" Name="Update" />
@@ -326,14 +356,20 @@
         <Link Id="RgmdvipMhKsLoTUYv3xmCH" Ids="M9Ksj6dn8qQPBiDzSsTVWw,Jd8AgPmTA3UN52ciZDdS3Q" />
         <Link Id="LLbzP6fR8YcPIcyRZ6yIZC" Ids="EVretaHJNxPQGcDT7A3HdM,Vd2hV3PwOXtQEmeOx7ed1J" />
         <Link Id="BSRmcmOIKRpMjfvyAk8E5p" Ids="Q1RBphc8EC2L5GhpY61MTc,DLIa4LDTpahO5GH617OaDt" />
-        <Link Id="B6pw6vhAfprO9LunT5GycL" Ids="DLIa4LDTpahO5GH617OaDt,J1vYbQxz46lMIN8KwdiRPE" />
-        <Link Id="B5nIlus52INLkauOMyPDu2" Ids="P5GDCS8rvBgQC3raWTjZJI,OKlNdJCzZTaPOmr8ZLaGTR" />
         <Link Id="QT0LqeEH3p5OK7hIleFaM4" Ids="InfU4P57IaLMmNPOEvSBR6,Jq3ESkXOXDsNSrr7Oy626C" />
         <Link Id="LN3xmMjQWwaPKdJlYXN7Em" Ids="Jq3ESkXOXDsNSrr7Oy626C,ETsN9uqIarZMGtYXKbimuE" />
         <Link Id="H3lygQLlfJXOOHc74iXAAR" Ids="Od6xjNMzGN6OUvy3B5uo3O,VOMNWQlhCg2QQvpvhDz0ji" />
         <Link Id="Ubp1yeWieA8QW76QhSqWs6" Ids="OLlB28anxGoPW39a6iuQHu,P7bFODzAjkwLQxBBzxxDp1" />
         <Link Id="UYLHgtHLwz9NvtKhvFZBZ4" Ids="HDTFCdeiYC7QFirocsTjLF,UjNOAVnzQodPNHJAWSbRsp" />
         <Link Id="RSy4RNoHv4PNvjVtlwkvKd" Ids="LU7iASlsVVrNkKEJ6aGTwp,DDmFRJLggB0PjgGD4ETwZo" />
+        <Link Id="P2YIsx8achEMzv6cYqoMyv" Ids="QosO1hVWg6APst1l8IFfKa,KaE9KE2LmM8MI7l3I4Yy7u" />
+        <Link Id="JREXrmvrl0EPyKXJiY6R5T" Ids="T7RFzKp4wsMOmI0AR4jnAN,ANT2aKW5k1GLSdVoN2lz9r" />
+        <Link Id="Nez1O6gG1HqMMvqWFD2esh" Ids="Nw1FZQWt8v6QWhVCCGNHIu,BDfnP3xTvXgMixOVlil2CT" />
+        <Link Id="EyAd2bF3qSKOpCPwFJ7Vq5" Ids="ApVHg4yaUVXLniwb5EQEpB,IJh3fFyu2hfMBto609sguA" />
+        <Link Id="Pd8LdRWt0gfLtcoDOahLB9" Ids="F0wBsAzBVmdL95h7z4fdii,AJCoRkdvurNMLF4ncAgFRn" />
+        <Link Id="N1ngegHntPzOfZ68QY8S6F" Ids="GDmMKshr9O3Md1FEZAmxLv,EqVPALU0xwrPUtTNQI3KP4" />
+        <Link Id="DLr1MoYSgaRQByDZ4D9SIo" Ids="DLIa4LDTpahO5GH617OaDt,J1vYbQxz46lMIN8KwdiRPE" />
+        <Link Id="VppSjEKARlnPXaBCU71q6R" Ids="P5GDCS8rvBgQC3raWTjZJI,LN6FnoHPlCBMYrfuunJZY4" />
       </Patch>
     </Node>
   </Patch>
