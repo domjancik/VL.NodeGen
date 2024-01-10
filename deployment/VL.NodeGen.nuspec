@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.NodeGen</id>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <title>VL.NodeGen</title>
     <authors>domj</authors>
     <owners>domj</owners>
@@ -11,12 +11,15 @@
     <summary>Use AI to effortlessly generate nodes for your vvvv gamma projects</summary>
     <description>Use AI to effortlessly generate nodes for your vvvv gamma projects</description>
     <tags>nuget</tags>
-	<license type="expression">MIT</license>
-	<icon>icon\nugeticon.png</icon>
+    <license type="expression">MIT</license>
+    <icon>icon\nugeticon.png</icon>
+    <dependencies>
+      <dependency id="VL.OpenAISimple" version="0.0.1" />
+    </dependencies>
   </metadata>
   <files>
     <file src="..\*.vl" target="" exclude="" />
     <file src="..\help\**" target="help\" exclude="" />
-	<file src="nugeticon.png" target="icon\" />
+    <file src="nugeticon.png" target="icon\" />
   </files>
 </package>
