@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="PtlyI35xmjVLJDNMzsZYyZ" LanguageVersion="2021.3.3.131" Version="0.128">
-  <NugetDependency Id="Emyqfy3Vq7JMkL91kvEt94" Location="VL.CoreLib" Version="2021.3.3" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="PtlyI35xmjVLJDNMzsZYyZ" LanguageVersion="2023.5.2" Version="0.128">
+  <NugetDependency Id="Emyqfy3Vq7JMkL91kvEt94" Location="VL.CoreLib" Version="2023.5.2" />
   <Patch Id="BpvVD2UZLM1QcHRFzNtVEa">
     <Canvas Id="GybgaLAVCgGN0ZOgUO2SNo" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -15,14 +15,165 @@
       </p:NodeReference>
       <Patch Id="Iozs4i7NcsnNswpU6Yl1Ks">
         <Canvas Id="TYPzLuqNjxkOMm7doebEde" CanvasType="Group">
-          <Pad Id="Fx0aYMtxOyvPlpz9ya8qVQ" Bounds="358,301,320,0" ShowValueBox="true" isIOBox="true" Value="https://github.com/domjancik/VL.NodeGen">
-            <p:TypeAnnotation>
+          <Node Bounds="30,341,65,19" Id="EL8huKo8Q0JMXUBkD6q2zS">
+            <p:NodeReference LastCategoryFullName="VL.NodeGen" LastDependency="VL.NodeGen.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="NodeGen" />
+            </p:NodeReference>
+            <Pin Id="A2AhKb2c96nNCnSkw4t4VH" Name="Input" Kind="InputPin" />
+            <Pin Id="QunHbiv3e4ML6au4bAXfcP" Name="CSharp Project Directory" Kind="InputPin" />
+            <Pin Id="E4TUIsCeIKLPTKAmiiTq6l" Name="Generate" Kind="InputPin" />
+            <Pin Id="Vd2hV3PwOXtQEmeOx7ed1J" Name="Include Original Prompt in Result" Kind="InputPin" />
+            <Pin Id="BvBytpUOcxDPOiKDzUkAgg" Name="Output" Kind="OutputPin" />
+            <Pin Id="Um5fI9LdE32QHkX50I2vVD" Name="Completed" Kind="OutputPin" />
+            <Pin Id="PBVFMVv0Ic3MRMMS0aZwRP" Name="Node Name" Kind="OutputPin" />
+            <Pin Id="QosO1hVWg6APst1l8IFfKa" Name="Error" Kind="OutputPin" />
+          </Node>
+          <Pad Id="TzCgFgjvb9aLWIvMnkOAFE" Comment="Generate" Bounds="84,258,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="AcSmitN9PNYMFi8qoFG9lE" Comment="CSharp Project Directory" Bounds="58,224,140,15" ShowValueBox="true" isIOBox="true" Value="csharp\nodegen-help-project\">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="AzOfRYcZXZgLZh6T65tdR6" Comment="Function prompt" Bounds="30,173,424,36" ShowValueBox="true" isIOBox="true" Value="Based on a time parameter input representing seconds passed return an animation, ie stages of breath. Do not make the breath completely even in each repetition">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="B3T9oF19CYpMMvKIcqP5jz" Comment="Node Name" Bounds="85,389,84,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="RfEy8EJLw9DNYNxSffa2Ht" Comment="Completed" Bounds="32,420,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="FIf5ZWqeopDQdTTaUJIeM3" Bounds="15,37,621,117" ShowValueBox="true" isIOBox="true" Value="1. Place our OpenAI API key in the OPENAI_API_KEY environment variable&#xD;&#xA;2. Come up with and insert a Function prompt - what your new node is supposed to do&#xD;&#xA;3. If you haven't yet, create a C# project by creating a C# file from the Quad menu &gt; New&#xD;&#xA;4. Using Shift+Right click, select the project directory&#xD;&#xA;5. Press generate and wait&#xD;&#xA;6. Use your new node">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
               <p:fontsize p:Type="Int32">9</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="79,620,110,86" Id="N9rPSvnVBaVO2Vm9taXxAA">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+            </p:NodeReference>
+            <Pin Id="Lg41y8QwLtwL2tFS8Lr60S" Name="Break" Kind="OutputPin" />
+            <Patch Id="B5aHUa9z8YPOX7GwNBroQg" ManuallySortedPins="true">
+              <Patch Id="UglWXXoqpGiMoxBDtV6fDL" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="PtBIPBYbLDUPRGw2JKqpmL" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="Eo2DMrADmwMP0p3BlHBwEc" Name="Dispose" ManuallySortedPins="true" />
+              <Node Bounds="92,652,85,19" Id="BqomZ0hANFGOQQMkCdPB7U">
+                <p:NodeReference LastCategoryFullName="test_namespace.BreathAnimation" LastDependency="nodegen-help-project.csproj">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="BreathAnimation" />
+                  <Choice Kind="OperationCallFlag" Name="GetBreathStage" />
+                </p:NodeReference>
+                <Pin Id="AHA07GPmftgMLH914A2pvv" Name="Time" Kind="InputPin" />
+                <Pin Id="MMcgrAGL5S7ODa3VkG09iA" Name="Output" Kind="OutputPin" />
+              </Node>
+            </Patch>
+            <ControlPoint Id="Vz6kAvmmt2xPyIlpMjYRYc" Bounds="93,626" Alignment="Top" />
+            <ControlPoint Id="G9kqUAyLNqkO6EGyvWJv4O" Bounds="94,700" Alignment="Bottom" />
+          </Node>
+          <Node Bounds="91,590,85,19" Id="BnF03bO4MXHNMrfw9aeOA9">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="LinearSpread (Range)" />
+            </p:NodeReference>
+            <Pin Id="KzyarjOZwxsOrEQeS76311" Name="Range" Kind="InputPin" />
+            <Pin Id="MVcxTQQGFp3NhWv3ogozbY" Name="Alignment" Kind="InputPin" DefaultValue="LeftJustified" />
+            <Pin Id="I7i9vZcr6LrNwKSAsNOh6S" Name="Phase" Kind="InputPin" />
+            <Pin Id="BGgAFs0lt4yLiYJZuQZLrS" Name="Count" Kind="InputPin" DefaultValue="20" />
+            <Pin Id="AdS1eNExbwiPX5o9gRQui4" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="MssWelUZNPdPGUNtFAgyfO" Comment="" Bounds="95,748,441,95" ShowValueBox="true" isIOBox="true" Value="0">
+            <p:ValueBoxSettings>
+              <p:horizontal p:Type="Boolean">true</p:horizontal>
+              <p:maximum p:Type="Single">1.25</p:maximum>
+              <p:maxvisibleentries p:Type="Int32">20</p:maxvisibleentries>
+              <p:minimum p:Type="Single">-0.25</p:minimum>
+              <p:showslider p:Type="Boolean">true</p:showslider>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="91,554,46,26" Id="QphNqH876BWOQZ7VfeHQvQ">
+            <p:NodeReference LastCategoryFullName="Math.Ranges.Range" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="ClassType" Name="Range" />
+              <Choice Kind="OperationCallFlag" Name="Create" />
+            </p:NodeReference>
+            <Pin Id="AVe6ifAvzR3MEG8PwSECMk" Name="From" Kind="InputPin" />
+            <Pin Id="AdjEeQm2neyO84p4y6zrl6" Name="To" Kind="InputPin" DefaultValue="10" />
+            <Pin Id="FTJJSJKX10MPpQ9gQI88FB" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Node Bounds="145,554,45,19" Id="PFVDbVKAiznMW2yBa6xqgw">
+            <p:NodeReference LastCategoryFullName="Animation" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="LFO" />
+            </p:NodeReference>
+            <Pin Id="GCcb88tNXOdLTNaqzOgh7L" Name="Period" Kind="InputPin" DefaultValue="5" />
+            <Pin Id="SzWORDRD9GBL99szEf5gvZ" Name="Pause" Kind="InputPin" />
+            <Pin Id="PF5KmjXRxGIMm57tV80waO" Name="Reset" Kind="ApplyPin" />
+            <Pin Id="DfwUzlsj5GoNT7IhYvG1dE" Name="Phase" Kind="OutputPin" />
+            <Pin Id="KYVb7ZJoEcCPCPQRRzmbDP" Name="On New Cycle" Kind="OutputPin" />
+            <Pin Id="BPsC7WATX31QDOHwDcI7V0" Name="Cycles" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="660,611,77,19" Id="G3Wbq6wcuCsMBj36HlpZ9L">
+            <p:NodeReference LastCategoryFullName="nodegen_help_project.CaesarCipher" LastDependency="nodegen-help-project.csproj">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="AssemblyCategory" Name="CaesarCipher" />
+              <Choice Kind="OperationCallFlag" Name="EncryptString" />
+            </p:NodeReference>
+            <Pin Id="FCRmk2ZhdU7NMha9RJgWoc" Name="Input" Kind="InputPin" />
+            <Pin Id="SUH9lF0XrD3PcwLvKUJGzt" Name="Shift" Kind="InputPin" />
+            <Pin Id="Bcxr3hWzbD3NEl2zHdItrT" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="IUsviVIpqhDLINHzeN7I0V" Comment="" Bounds="662,563,155,15" ShowValueBox="true" isIOBox="true" Value="Knock knock, who's there?">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Kx0Qv3uwqu9LwjgFQPPuEV" Comment="" Bounds="662,663,123,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="VHWcVJDnHARO6jBIWEFn9U" Comment="Shift" Bounds="830,586,35,15" ShowValueBox="true" isIOBox="true" Value="3">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="660,711,77,19" Id="VQLUaFcwtOLPpjlF31aLSn">
+            <p:NodeReference LastCategoryFullName="nodegen_help_project.CaesarCipher" LastDependency="nodegen-help-project.csproj">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="AssemblyCategory" Name="CaesarCipher" />
+              <Choice Kind="OperationCallFlag" Name="EncryptString" />
+            </p:NodeReference>
+            <Pin Id="VjHADHK1kQELO8XRTmp2sv" Name="Input" Kind="InputPin" />
+            <Pin Id="LilzHsgsxM7NGU2kUQZKFl" Name="Shift" Kind="InputPin" />
+            <Pin Id="SDjP08WbaJqNZohTf1q1VO" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="AD5d8cwWiKDPLczHzqT8tN" Comment="Shift" Bounds="832,690,35,15" ShowValueBox="true" isIOBox="true" Value="-3">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="TRNCW2OdReHPZzmFtZQnYY" Comment="" Bounds="662,763,128,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="OVOLBKvpQ1EMbZn93LkY5B" Comment="Function prompt" Bounds="6,501,424,36" ShowValueBox="true" isIOBox="true" Value="Based on a time parameter input representing seconds passed return an animation, ie stages of breath. Do not make the breath completely even in each repetition">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="E3kPph4ldkqMf2eeARNUq7" Comment="Function prompt" Bounds="652,502,424,36" ShowValueBox="true" isIOBox="true" Value="Encrypt a string using the caesar (shift) cypher">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
           </Pad>
         </Canvas>
         <Patch Id="Vq3lgQZFdDuLmS2C8XYv4G" Name="Create" />
@@ -31,8 +182,27 @@
           <Fragment Id="Lc4Mvoev0RvP8kQcjTTk15" Patch="Vq3lgQZFdDuLmS2C8XYv4G" Enabled="true" />
           <Fragment Id="KOoTaSSszUmPooybFfn5wV" Patch="RJf8g5BksLXO6I5Lcolsds" Enabled="true" />
         </ProcessDefinition>
+        <Link Id="U0X61MbxkHjPXuGB1gCVLD" Ids="TzCgFgjvb9aLWIvMnkOAFE,E4TUIsCeIKLPTKAmiiTq6l" />
+        <Link Id="Kl8xprlpIbuOtGImcJcBSw" Ids="AcSmitN9PNYMFi8qoFG9lE,QunHbiv3e4ML6au4bAXfcP" />
+        <Link Id="H3fw203hzdPObliLeiNR53" Ids="AzOfRYcZXZgLZh6T65tdR6,A2AhKb2c96nNCnSkw4t4VH" />
+        <Link Id="UT3H53WzPmpLkh15Pa7dDZ" Ids="PBVFMVv0Ic3MRMMS0aZwRP,B3T9oF19CYpMMvKIcqP5jz" />
+        <Link Id="Oouz050TonpM2e71KlFDsA" Ids="Um5fI9LdE32QHkX50I2vVD,RfEy8EJLw9DNYNxSffa2Ht" />
+        <Link Id="FMpExlNqf8gOFttAs4OihD" Ids="Vz6kAvmmt2xPyIlpMjYRYc,AHA07GPmftgMLH914A2pvv" />
+        <Link Id="B5XYlwZcrHBODOl3HN7y1x" Ids="AdS1eNExbwiPX5o9gRQui4,Vz6kAvmmt2xPyIlpMjYRYc" />
+        <Link Id="VfWEYREqYpoMTjGS1tQtDt" Ids="MMcgrAGL5S7ODa3VkG09iA,G9kqUAyLNqkO6EGyvWJv4O" />
+        <Link Id="U7iEYv1SsHALujRTyo2BzL" Ids="G9kqUAyLNqkO6EGyvWJv4O,MssWelUZNPdPGUNtFAgyfO" />
+        <Link Id="Eu90FTbRp0JM7xBq9W8vAy" Ids="FTJJSJKX10MPpQ9gQI88FB,KzyarjOZwxsOrEQeS76311" />
+        <Link Id="Fmz3g5VzNYsNNEECAWQjZS" Ids="DfwUzlsj5GoNT7IhYvG1dE,I7i9vZcr6LrNwKSAsNOh6S" />
+        <Link Id="NriHVubjeZkML3XkRhHlho" Ids="IUsviVIpqhDLINHzeN7I0V,FCRmk2ZhdU7NMha9RJgWoc" />
+        <Link Id="PQWstcAD1oiPrg3jqdShhy" Ids="Bcxr3hWzbD3NEl2zHdItrT,Kx0Qv3uwqu9LwjgFQPPuEV" />
+        <Link Id="F516mJiGjq4LeZKUWEWg29" Ids="VHWcVJDnHARO6jBIWEFn9U,SUH9lF0XrD3PcwLvKUJGzt" />
+        <Link Id="CGbZgDz55keM9xtRftbnt3" Ids="Kx0Qv3uwqu9LwjgFQPPuEV,VjHADHK1kQELO8XRTmp2sv" />
+        <Link Id="LhgGM0awtpLNvW6wY7XD1X" Ids="AD5d8cwWiKDPLczHzqT8tN,LilzHsgsxM7NGU2kUQZKFl" />
+        <Link Id="BTQK8XH6OBXQPuuKYeT8uo" Ids="SDjP08WbaJqNZohTf1q1VO,TRNCW2OdReHPZzmFtZQnYY" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="SYe2aNsFUnNPOvHH9csxht" Location="VL.CoreLib" Version="2021.3.3" />
+  <NugetDependency Id="SYe2aNsFUnNPOvHH9csxht" Location="VL.CoreLib" Version="2023.5.2" />
+  <DocumentDependency Id="HxPQOybNaaGMLLK1TQ9r5I" Location="../VL.NodeGen.vl" />
+  <ProjectDependency Id="RsvDWyLflZoLvCOnDKBFjk" Location="./csharp/nodegen-help-project/nodegen-help-project.csproj" />
 </Document>
