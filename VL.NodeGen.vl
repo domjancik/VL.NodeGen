@@ -2,7 +2,7 @@
 <Document xmlns:p="property" Id="EWHWcwf3oBvPnhn254YyBa" LanguageVersion="2021.3.3.131" Version="0.128">
   <NugetDependency Id="ACwLMEAeXcTOlfIlaZVQ9S" Location="VL.CoreLib" Version="2021.3.3" />
   <Patch Id="Rgz0iK0cdl5O6XLZAnSI2k">
-    <Canvas Id="EtMz6eWyJpjMOVOROl6714" DefaultCategory="VL.Nuget.Template" CanvasType="FullCategory" />
+    <Canvas Id="EtMz6eWyJpjMOVOROl6714" DefaultCategory="VL.NodeGen" CanvasType="FullCategory" />
     <!--
 
     ************************ Application ************************

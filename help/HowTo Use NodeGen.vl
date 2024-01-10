@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="Iozs4i7NcsnNswpU6Yl1Ks">
         <Canvas Id="TYPzLuqNjxkOMm7doebEde" CanvasType="Group">
-          <Pad Id="Fx0aYMtxOyvPlpz9ya8qVQ" Bounds="358,301,320,0" ShowValueBox="true" isIOBox="true" Value="https://github.com/domjancik/VL.Nuget.Template">
+          <Pad Id="Fx0aYMtxOyvPlpz9ya8qVQ" Bounds="358,301,320,0" ShowValueBox="true" isIOBox="true" Value="https://github.com/domjancik/VL.NodeGen">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
