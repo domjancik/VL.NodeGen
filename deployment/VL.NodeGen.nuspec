@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.NodeGen</id>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <title>VL.NodeGen</title>
     <authors>domj</authors>
     <owners>domj</owners>
