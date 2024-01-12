@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.NodeGen</id>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
     <title>VL.NodeGen</title>
     <authors>domj</authors>
     <owners>domj</owners>
@@ -14,7 +14,7 @@
     <license type="expression">MIT</license>
     <icon>icon\nugeticon.png</icon>
     <dependencies>
-      <dependency id="VL.OpenAISimple" version="0.0.1" />
+      <dependency id="VL.OpenAISimple" version="[0.0.2]" />
     </dependencies>
   </metadata>
   <files>
